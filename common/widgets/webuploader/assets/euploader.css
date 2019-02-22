@@ -1,0 +1,298 @@
+/*==============================================================================
+ *
+ * webuploader 百度上传组件样式
+ *
+ *============================================================================*/
+/* 选择文件按钮 */
+.webuploader-container {
+    position: relative;
+    display: inline-block;
+}
+.webuploader-element-invisible {
+    width:100%;     /*自定义样式*/
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #00b7ee;
+    padding: 6px 12px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+    overflow: hidden;
+    height: 34px;
+}
+.webuploader-pick-hover {
+    background: #00a2d4;
+}
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events:none;
+}
+
+
+/*==============================================================================
+ *
+ * euploader 样式
+ *
+ *============================================================================*/
+/* 根容器 */
+.euploader-root {}
+/* 按钮容器 */
+.euploader-btns {}
+
+.euploader-btns > div{
+    float: left;
+}
+/* 控制按钮 */
+.euploader-ctl-btn {
+    float: left;
+    margin-left: 5px;
+    border-radius: 0px;
+}
+/* 列表父级容器 */
+.euploader-list-container {
+    border-top: solid 1px #e4e4e4;
+    font-size: 12px;
+    clear: both;
+}
+/* 列表 */
+.euploader-list {}
+
+/*========================================================
+ *
+ * 列表项样式
+ *
+ *======================================================*/
+.euploader-list > thead > tr > th,
+.euploader-list > thead > tr > td,
+.euploader-list > tbody > tr > th,
+.euploader-list > tbody > tr > td {
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border:1px solid #e4e4e4;
+    color: #666666;
+}
+
+.euploader-list > thead > tr > th {
+    background-color: #f2f2f2;
+}
+
+/* input */
+.euploader-item-input {
+    width: 1px;
+}
+/* 状态图标 */
+.euploader-item-status {}
+/* 文件名 */
+.euploader-item-filename {
+    color: #333;
+}
+/* 状态 */
+.euploader-item-state {}
+/* 文件大小 */
+.euploader-item-size {}
+/* 按钮 */
+.euploader-item-btns {}
+
+
+/* 等待状态 */
+.euploader-item-waiting {}
+.euploader-item-waiting .state-color {color: #ccc}
+
+/* 上传中状态 */
+.euploader-item-uploading {}
+.euploader-item-uploading .state-color {color: #000}
+
+/* 成功状态 */
+.euploader-item-succeed {}
+.euploader-item-succeed .state-color {color: #5cb85c}
+
+/* 失败状态 */
+.euploader-item-fail {}
+.euploader-item-fail .state-color {color: #d9534f}
+
+/* 已存状态 */
+.euploader-item-exist {}
+.euploader-item-exist .state-color {color: #2196f3}
+
+/* 已上传状态 */
+.euploader-item-done {}
+.euploader-item-done .state-color {color: #ccc}
+
+/*========================================================
+ * 文件列表项样式
+ *======================================================*/
+.table-list {}
+
+.table-list .euploader-item{
+    display: none;
+}
+.table-list .info-summary{
+    color: #aaa;
+    margin: 10px 10px;
+    float: left;
+    font-size: 12px;
+ }
+/* 状态图标 */
+.filelist-status {
+    width: 30px;
+}
+/* 文件名 */
+.filelist-filename {
+    color: #333;
+}
+/* 状态 */
+.filelist-state {
+    width: 300px;
+}
+/* 文件大小 */
+.filelist-size {
+    width: 95px;
+    color: #ccc;
+}
+/* 按钮 */
+.filelist-btns {
+    width: 50px;
+}
+
+/* 分页样式 */
+.table-list .page-nav .pagination {
+
+}
+
+
+/*========================================================
+ * 图片列表项样式
+ *======================================================*/
+.tile .euploader-list-container{
+    display: inline-block;
+}
+
+.tile .euploader-btns {
+    display: inline-block;
+    text-align: center;
+    padding: 0px;
+    font-size: 24px;
+    height: 128px;
+    width: 128px;
+    overflow: hidden;
+}
+
+.tile .euploader-btns label{
+    margin-bottom : 0px !important;
+}
+
+.tile .webuploader-pick {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    background: #fff;
+    padding: 0px;
+    color: #000;
+    height: 128px;
+    width: 128px;
+    border-radius: 0px;
+    border: solid 1px #e4e4e4;
+    line-height: 128px;
+}
+
+/* 状态图标 */
+.tile .euploader-item {
+    position: relative;
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+    margin: 1px;
+    overflow: hidden;
+}
+
+/* 图标 */
+.tile .euploader-item .glyphicon{
+    line-height: inherit;
+}
+
+/* 信息 */
+.tile .euploader-item .head-box {
+    position: absolute;
+    display: inline-block;
+    top:-30px;
+    width: 100%;
+    padding: 3px 8px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* 状态图标 */
+.tile .euploader-item .euploader-item-status {
+    display: inline-block;
+    float: left;
+}
+/* 播放图标 */
+.tile .euploader-item .euploader-item-play-icon {
+    line-height: 128px;
+    text-align: center;
+    display: none;
+}
+.tile .euploader-item .euploader-item-play-icon img{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.tile .euploader-item .euploader-item-play-icon img:hover{
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 文件名 */
+.tile .euploader-item .euploader-item-filename {
+    color: #333;
+}
+/* 状态 */
+.tile .euploader-item .euploader-item-state {
+    display: inline-block;
+    float: left;
+    color: #333;
+}
+
+/* 按钮 */
+.tile .euploader-item .euploader-item-btns {
+    display: inline-block;
+    float: right;
+ }
+.tile .euploader-item .euploader-item-btns .euploader-del-btn{
+    color: #d9534f;
+}
+
+/* 信息 */
+.tile .euploader-item .foot-box {
+    position: absolute;
+    display: inline-block;
+    left: 2px;
+    bottom: 2px;
+    padding: 0px 5px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* 文件大小 */
+.tile .euploader-item .euploader-item-size {
+    color: #333;
+    display: inline-block;
+    margin-left: 3px;
+}
+/* 类型 */
+.tile .euploader-item .euploader-item-type {
+    color: #333;
+    display: inline-block;
+}

@@ -1,0 +1,33 @@
+/*******************************************************************************
+ *
+ * Demo 样式
+ *
+ *******************************************************************************/
+
+.demo{};
+.demo .section{
+    margin-bottom: 50px;
+}
+/* 头部 */
+.demo .section .header{
+    border-bottom: solid 2px #999999;
+}
+
+/* 用例描述 */
+.demo .section .des{
+    color: #999;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+/* 用例 */
+.demo .section .example{
+    border: solid 1px #e4e4e4;
+    padding: 20px;
+}
+/* 代码 */
+.demo .section .code{
+    border: solid 1px #e4e4e4;
+    background-color: #f2f2f2;
+    padding: 20px;
+}

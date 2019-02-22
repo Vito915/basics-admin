@@ -1,0 +1,93 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2019-1-24, 11:24:47
+    Author     : Kiwi
+*/
+
+
+/*******************************************************************************
+ *
+ * pagination 分页样式
+ *
+********************************************************************************/
+#pagination {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+  text-align: left;
+  color: #0099ff;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+#pagination .first,
+#pagination .last,
+#pagination .prev,
+#pagination .next,
+#pagination .list li {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    cursor: default;
+    border-radius: 4px;
+    vertical-align: top;
+}
+#pagination .list {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    padding: 0px;
+}
+#pagination .list li {
+    width: 30px;
+    padding: 0;
+    text-align: center;
+}
+#pagination .list li.cur {
+    color: #fff;
+    background-color: #0099ff;
+    border-color: #428bca;
+}
+#pagination .go {
+    display: none;
+    position: relative;
+    max-width: 160px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+#pagination .go input {
+    float: left;
+    width: 70%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #0099ff;
+}
+#pagination .go button {
+    float: left;
+    width: 30%;
+    height: 100%;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0099ff;
+    border-radius: 0 4px 4px 0;
+}
+#pagination .disable {
+    color: #bfbfbf;
+    cursor: not-allowed;
+}
+
+#pagination input::-webkit-input-placeholder { color: #bfbfbf; }
+#pagination input::-moz-input-placeholder { color: #bfbfbf; }
+#pagination input:-ms-input-placeholder { color: #bfbfbf; } 

@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-3-7, 13:50:08
+    Author     : Vito
+*/
+/********* uploadfile-index样式 ***********/
+/** table表格th样式 */
+.uploadfile-index .viewdetail-th {
+    color: #666666;
+    width: 23%;
+    font-weight: normal;
+    text-align: right;
+    min-width: 73px;
+    vertical-align: middle;
+}
+
+/** table表格th-head样式 */
+.uploadfile-index .viewdetail-th-head {
+    color: #000000;
+    float: left;
+    font-weight: bold;
+}
+
+.uploadfile-index .frame {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: inline-block;
+}
+
+.uploadfile-index .frame-left {
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.uploadfile-index .frame
+.frame-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ffffff;
+    line-height: 20px;
+    background-color: rgba(153, 153, 153, 1);
+}
+
+.uploadfile-index .frame
+.frame-title>span {
+    display: block;
+    float: left;
+}
+
+/*******************************************************************************
+ *
+ * Banner管理
+ *
+********************************************************************************/
+.system-search .panel {
+    padding: 15px 0px; 
+    margin-bottom: 30px; 
+    border: 1px solid #e4e4e4; 
+    background: #f9f9f9;
+}
+
+.system-view .nav-tabs {
+    padding-left: 0 !important; 
+    border: 1px solid #ddd;
+    background-color: #f2f2f2;
+}
+
+.system-view .nav-tabs  > li {
+    float: left;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    margin-left: -1px;
+}
+
+.system-view .nav-tabs  > li > a {
+    margin-right: 0;
+    border-radius: 0;
+}
+
+.system-view .tab-content {
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-top: none;
+}
