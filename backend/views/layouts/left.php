@@ -35,37 +35,18 @@ use common\widgets\Menu;
         </form>
         <!-- /.search form -->
         <?php 
+            $menus = \common\models\Menu::getMenuList();
+
             $menuItems = [['label' => 'Menu Yii2', 'options' => ['class' => 'header']]];
             if(Yii::$app->user->isGuest){
                 $menuItems []= ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest];
-            }else{
-                $menuItems = array_merge($menuItems, [
-                    ['label' => '清除缓存', 'icon' => 'eraser', 'url' => ['/system_admin/cache']],
-                    [
-                        'label' => '系统',
-                        'icon' => 'bars',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '配置管理', 'icon' => 'circle-o', 'url' => ['/system_admin/config'],],
-                            ['label' => '日常任务', 'icon' => 'circle-o', 'url' => ['/system_admin/crontab'],],
-                            ['label' => '数据库备份', 'icon' => 'database', 'url' => ['/system_admin/db-backup']],
-                            ['label' => 'Banner管理', 'icon' => 'circle-o', 'url' => ['/system_admin/banner']],
-                        ],
-                    ],
-                    [
-                        'label' => '权限与组织管理',
-                        'icon' => 'bars',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '用户列表', 'icon' => 'circle-o', 'url' => ['/user_admin/default/index'],],
-                            ['label' => '用户角色', 'icon' => 'circle-o', 'url' => ['/rbac/user-role/index'],],
-                            ['label' => '角色列表', 'icon' => 'circle-o', 'url' => ['/rbac/role/index'],],
-                            ['label' => '权限列表', 'icon' => 'circle-o', 'url' => ['/rbac/permission/index'],],
-                            ['label' => '路由列表', 'icon' => 'circle-o', 'url' => ['/rbac/route/index'],],
-                            ['label' => '分组列表', 'icon' => 'circle-o', 'url' => ['/rbac/auth-group/index'],],
-                        ],
-                    ],
-                ]);
+            } else {
+
+                foreach ($menus as $items) {
+                    //if(isset($items['items']) && count($items['items']) > 0){
+                        $menuItems[] = $items;
+                    //}
+                }
             }
         ?>
         <?= Menu::widget(

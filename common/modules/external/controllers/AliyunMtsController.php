@@ -6,7 +6,7 @@ use common\components\aliyuncs\AliyunMtsService;
 use common\components\aliyuncs\MediaAliyunAction;
 use Exception;
 use Yii;
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\web\Controller;
 
 /**
@@ -47,7 +47,7 @@ class AliyunMtsController extends Controller {
 
     /**
      * 转码完成回调
-     * @param Object $post
+     * @param BaseObject $post
      */
     private function trancode($post) {
         $message = json_decode($post['Message']);         //信息体
@@ -72,7 +72,7 @@ class AliyunMtsController extends Controller {
     /**
      * 视频截图回调
      * 
-     * @param Object $post
+     * @param BaseObject $post
      */
     private function snapshot($post) {
         //...
