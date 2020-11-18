@@ -5,17 +5,17 @@ return [
         'ffmpeg.binaries' => '/usr/bin/ffmpeg',
         'ffprobe.binaries' => '/usr/bin/ffprobe',
     ],
-     /* 阿里云OSS配置 */
+    /* 阿里云OSS配置 */
     'aliyun' => [
-        'accessKeyId' => 'LTAIM0fcBM6L6mTa',
-        'accessKeySecret' => '2fSyGRwesxyP4X2flUF35n7brgxlEf',
+        'accessKeyId' => 'xxxxxxxxxx',
+        'accessKeySecret' => 'xxxxxxxxxxxx',
         'oss' => [
-            'bucket-input' => 'studying8',
-            'bucket-output' => 'studying8',
-            'host-input' => 'studying8.oss-cn-shenzhen.aliyuncs.com',                   
-            'host-output' => 'file.studying8.com',                  
-            'host-input-internal' => 'studying8.oss-cn-shenzhen-internal.aliyuncs.com',
-            'host-output-internal' => 'studying8.oss-cn-shenzhen-internal.aliyuncs.com',
+            'bucket-input' => 'xx',
+            'bucket-output' => 'x',
+            'host-input' => 'xxxx',                   
+            'host-output' => 'xxxx',                  
+            'host-input-internal' => 'xxxxx',
+            'host-output-internal' => 'xxxxx',
             'endPoint' => 'oss-cn-shenzhen.aliyuncs.com',
             'endPoint-internal' => 'oss-cn-shenzhen-internal.aliyuncs.com',
         ],
