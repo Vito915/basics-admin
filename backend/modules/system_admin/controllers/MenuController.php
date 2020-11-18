@@ -2,17 +2,19 @@
 
 namespace backend\modules\system_admin\controllers;
 
+use common\widgets\grid\GridViewChangeSelfController;
 use Yii;
-use common\models\Crontab;
-use common\models\searchs\CrontabSearch;
+use common\models\Menu;
+use common\models\searchs\MenuSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use function Fixed\dump;
 
 /**
- * 定时任务管理
+ * MenuController implements the CRUD actions for Menu model.
  */
-class CrontabController extends Controller
+class MenuController extends GridViewChangeSelfController
 {
     /**
      * {@inheritdoc}
@@ -30,22 +32,24 @@ class CrontabController extends Controller
     }
 
     /**
-     * 显示所有定时任务
+     * Lists all Menu models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new CrontabSearch();
+        $searchModel = new MenuSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        $parentMenu = Menu::getMenus(['level' => 0]);
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'parentMenus' => array_merge(['0' => '顶级菜单'], $parentMenu),
         ]);
     }
 
     /**
-     * 查看定时任务详情
+     * Displays a single Menu model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +62,14 @@ class CrontabController extends Controller
     }
 
     /**
-     * 创建一个定时任务
+     * Creates a new Menu model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Crontab();
+        $model = new Menu();
+        $model->loadDefaultValues();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,11 +77,12 @@ class CrontabController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'parentMenus' => Menu::getMenus(['level' => 0]),
         ]);
     }
 
     /**
-     * 更新定时任务
+     * Updates an existing Menu model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -92,11 +98,12 @@ class CrontabController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'parentMenus' => Menu::getMenus(['level' => 0]),
         ]);
     }
 
     /**
-     * 删除定时任务
+     * Deletes an existing Menu model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +117,15 @@ class CrontabController extends Controller
     }
 
     /**
-     * 查找定时任务对象
+     * Finds the Menu model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Crontab the loaded model
+     * @return Menu the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Crontab::findOne($id)) !== null) {
+        if (($model = Menu::findOne($id)) !== null) {
             return $model;
         }
 

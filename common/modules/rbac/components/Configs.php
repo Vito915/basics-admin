@@ -4,7 +4,7 @@ namespace common\modules\rbac\components;
 
 use Exception;
 use Yii;
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\caching\Cache;
 use yii\db\Connection;
 use yii\di\Instance;
@@ -41,7 +41,7 @@ use yii\rbac\ManagerInterface;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 1.0
  */
-class Configs extends Object
+class Configs extends BaseObject
 {
     const CACHE_TAG = 'mdm.admin';
 
